@@ -36,7 +36,7 @@ const handlePlayPause = (id) => {
 
   useEffect(() => {
     const asyncEffect = async () => {
-      const promise = await fetch("https://z5ogfwmsriman66d7ioucpguh40kpbod.lambda-url.ca-central-1.on.aws/");
+      const promise = await fetch("https://7intgiyxoezehdnnd7eclvskui0uanah.lambda-url.ca-central-1.on.aws/");
       const res = await promise.json();
       setObituaries(res);
     };
@@ -69,11 +69,20 @@ const handlePlayPause = (id) => {
       <header>
         <aside>&nbsp;</aside>
         <div id="app-header">
-          <h1>The Last Show</h1>
+          <h1>Story Generator</h1>
+          <p class="subheading" style={{
+              color: '#777', 
+              fontSize: '14px', 
+              marginLeft: '120px',
+            }}
+          > 
+          </p>
+    
+  
         </div>
         <aside>
           <button id="new-obituary-button" onClick={handleClick}>
-            <h4>+ New Obituary</h4>
+            <h4>+ New Story</h4>
           </button>
         </aside>
       </header>

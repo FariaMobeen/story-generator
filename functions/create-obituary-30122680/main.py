@@ -48,14 +48,15 @@ def gpt_response(prompt):
     }
     res = requests.post(url, headers=headers, json=body)
     response_json = json.loads(res.text)
+    print(response_json)
     return response_json["choices"][0]["text"]
 
 
 def upload_to_cloudinary(filename, resource_type, extra_fields=None):
-    cloudinary_api_secret = get_parameter("/the-last-show/cloudinary-secret")
-    cloudinary_api_key = get_parameter("/the-last-show/cloudinary-key")
+    cloudinary_api_secret = get_parameter("/the-last-show/cloudinary-api-secret")
+    cloudinary_api_key = get_parameter("/the-last-show/cloudinary-api-key")
     print(cloudinary_api_secret, cloudinary_api_key)
-    cloud_name = "djhms7feu"
+    cloud_name = "dxvulzhvt"
 
     body = {
         "api_key": cloudinary_api_key,
@@ -137,7 +138,7 @@ def lambda_handler(event, context):
 
     res_img = upload_to_cloudinary(key, resource_type="image", extra_fields={"eager": ["e_art:zorro"]})
     chatgpt_prompt = gpt_response(
-        f"write a funny obituary about a fictional character named {name} who was born on {born_year} and died on {died_year}."
+        f"write a funny story about a fictional character named {name} who was born on {born_year} and died on {died_year}."
     )
 
     voice_prompt = polly_speech(chatgpt_prompt)

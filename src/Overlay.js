@@ -34,7 +34,7 @@ const Overlay = ({onClose, onObituarySubmit }) => {
 
     try {
       const promise = await fetch(
-        "https://y7hm73yzfnppotowqxjp4yvs540yfeiq.lambda-url.ca-central-1.on.aws/",
+        "https://f67i5p6pifwkogd5qj25vacklq0nfyug.lambda-url.ca-central-1.on.aws/",
         {
           method: "POST",
           body: data,
