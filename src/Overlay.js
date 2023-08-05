@@ -68,11 +68,11 @@ const Overlay = ({onClose, onObituarySubmit }) => {
             <button id="close-overlay-content-button" onClick={onClose}>
                 <h1>X</h1>
             </button>
-            <h1>Create a New Obituary</h1>
+            <h1>Create a New Story</h1>
             <img id="obituary-image" src="line.png" alt="obituary" />
                      <form onSubmit = {(e) => submitForm(e)}>
                 <label htmlFor="image-input" id="select-image-label">
-                    Select an image for the deceased <mark style={{backgroundColor:"pink"} }>{imageName && `(${imageName})`}</mark>
+                    Select an image of the Main Character <mark style={{backgroundColor:"pink"} }>{imageName && `(${imageName})`}</mark>
                 </label>
                 <input
                     type="file"
@@ -110,7 +110,7 @@ const Overlay = ({onClose, onObituarySubmit }) => {
                     />
                 </div>
                 <button id="submit-button" type="submit">
-                {loading ? "Please wait ..." : "Write Obituary"}
+                {loading ? "Please wait ..." : "Write Story"}
                 </button>
             </form>
         </div>
