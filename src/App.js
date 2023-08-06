@@ -126,7 +126,7 @@ const handlePlayPause = (id) => {
           </div>
         ) : (
           <div id="empty-container">
-            <h5>No Obituary Yet</h5>
+            <h5>No Story Yet</h5>
           </div>
         )}
       </div>
