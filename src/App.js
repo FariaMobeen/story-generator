@@ -69,7 +69,7 @@ const handlePlayPause = (id) => {
       <header>
         <aside>&nbsp;</aside>
         <div id="app-header">
-          <h1>Story Generator</h1>
+          <h1>Story Generatorrrrrrrr</h1>
           <p class="subheading" style={{
               color: '#777', 
               fontSize: '14px', 
